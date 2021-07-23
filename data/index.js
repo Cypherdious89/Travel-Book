@@ -20,7 +20,7 @@ const sample = array => array[Math.floor(Math.random()*array.length)];
 
 const seedDB = async ()=> {
     await Location.deleteMany({});
-    for(let i=0; i<50; i++){
+    for(let i=0; i<20; i++){
         const random = Math.floor(Math.random() * 1000);
         const site = new Location({
             title: `${sample(descriptors)} ${sample(places)}`,
